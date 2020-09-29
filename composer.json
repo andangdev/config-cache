@@ -1,0 +1,40 @@
+{
+    "name": "ugiw/lumen-config-cache",
+    "description": "Adds the Laravel command `php artisan config:cache` to Lumen",
+    "type": "library",
+    "keywords": [
+        "Ugiw",
+        "lumen-config-cache",
+        "laravel",
+        "lumen-package"
+    ],
+    "homepage": "https://github.com/andangsugiana/lumen-config-cache",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andang Sugiana",
+            "email": "andangdev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ugiw\\ConfigCache\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ugiw\\ConfigCache\\ServiceProviders\\ConfigCacheServiceProvider"
+            ],
+            "aliases": {
+                "ConfigCache": "Ugiw\\ConfigCache\\Facades\\ConfigCacheFacade"
+            }
+        }
+    }
+}
